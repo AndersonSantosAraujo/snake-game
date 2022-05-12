@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --color-outside: #333;
+  --color-inside: #000;
+  --color-rat: #ff0;
+  --color-snake: #f00;
+  --color-head-snake: #0f0;
+  --color-font-primary: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--color-outside);
+}
+
+.snake-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: var(--color-inside);
+}
+
+.rat {
+  position: absolute;
+  border: 1px solid var(--color-inside);
+  background: var(--color-rat);
+}
+
+.snake {
+  position: absolute;
+  border: 1px solid var(--color-inside);
+  background: var(--color-snake);
+}
+
+.head {
+  background: var(--color-head-snake);
+}
+
+.score {
+  position: absolute;
+  font-family: "Press Start 2P";
+  font-size: 1rem;
+  color: var(--color-font-primary);
+  top: -2rem;
+  left: -0.5rem;
+}
+
+.score span {
+  font-family: "Press Start 2P";
+  font-size: 1rem;
+  color: var(--color-font-primary);
+}
+
+.game-over {
+  font-family: "Press Start 2P";
+  font-size: 1.5rem;
+  color: var(--color-font-primary);
+  margin-bottom: 1rem;
+  z-index: 100;
+}
+
+.press-start {
+  font-family: "Press Start 2P";
+  font-size: 1rem;
+  color: var(--color-font-primary);
+  animation: flash 1s infinite;
+  z-index: 100;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
